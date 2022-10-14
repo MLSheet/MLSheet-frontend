@@ -1,26 +1,32 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Header from './header/Header';
-import axios from 'axios';
-import Spreadsheet from "react-spreadsheet";
+
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+} from "react-router-dom";
+
+import SpreadsheetPage from './spreadsheet-page/SpreadsheetPage';
+import DataFramesPage from './dataframes-page/DataFramesPage';
+import UploadPage from './upload-page/UploadPage';
 
 function App() {
-    const [datasheetData, setDatasheetData] = useState([])
-
-    useEffect(() => {
-        axios.get('http://localhost:3000/dataframes/2c0ac302-351b-4b3d-b322-c0ee14963b62').then(function (res){
-        console.log(res.data.data.data)
-        setDatasheetData(res.data.data.data)
-    })}, []) 
-    
-    
-
     return (
-        <div>
-            <Header />
-            <Spreadsheet
-            data={datasheetData}
-            />
-        </div>
+        <Router>
+            <div>
+                <Header />
+
+                <Routes>
+                    <Route exact path='/' component={<p>Hello World</p>}>
+                        <Route exact path="/dataframes/:id" element={<SpreadsheetPage/>} />
+                        <Route exact path="/dataframes" element={<DataFramesPage/>} />
+                        <Route exact path="/upload" element={<UploadPage/>} />
+                    </Route>
+                    
+                </Routes>
+            </div>
+        </Router>
     )
 }
 
