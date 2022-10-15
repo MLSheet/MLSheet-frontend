@@ -1,0 +1,19 @@
+.button{
+    height: 42px;
+    width: 144px;
+    padding: 0;
+
+
+    color: white;
+    text-decoration: none;
+
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+
+    transition: 220ms all ease-in-out;
+    &:hover {
+        filter: brightness(85%);
+    }
+
+}

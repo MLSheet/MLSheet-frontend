@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import  { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function UploadPage() {
+
+    const navigation = useNavigate()
 
     const [name, setName] = useState("");
     const [selectedFile, setSelectedFile] = useState('');
@@ -18,7 +21,12 @@ function UploadPage() {
             headers: {
                 'Content-Type': `multipart/form-data; boundary=${formData._boundary}`
             }
+        }).then((res) => {
+            console.log(res)
+            navigation(`/dataframes/${res.data.data.id}`)
         })
+
+        
     }
 
     return (

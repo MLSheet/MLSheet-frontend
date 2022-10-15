@@ -1,0 +1,16 @@
+@use '../variables' as v;
+
+.sidebar{
+    top: 0;
+    position:fixed;
+    background-color: v.$color-dark;
+    width: v.$sidebar-width;
+    height: 100%;
+}
+
+.button.sidebar-button {
+    background-color: v.$color-accent-1;
+    display: block;
+    margin: 10px auto 10px;
+    text-decoration: none;
+}

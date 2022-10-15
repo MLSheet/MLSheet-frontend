@@ -1,8 +1,17 @@
-html{
-    background-color: #DDDDDD;
-}
+@use "variables" as v;
 
 body {
+    background-color: v.$color-light;
     margin: 0;
     padding: 0;
+    display: inline-block;
+    min-height: 100vh;
+}
+
+.page-content {
+    margin-left: v.$sidebar-width;
+}
+
+a{
+    text-decoration: none;
 }
