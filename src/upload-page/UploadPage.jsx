@@ -14,6 +14,7 @@ function UploadPage() {
         let formData = new FormData()
         formData.append('df_name', name)
         formData.append('file', selectedFile)
+        formData.append('timestamp', new Date().toISOString().split('.')[0] + 'Z')
         axios({
             method: 'post', 
             url: 'http://localhost:3000/upload-csv',

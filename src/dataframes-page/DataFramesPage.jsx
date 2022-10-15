@@ -17,9 +17,22 @@ function DataFramesPage() {
         <ul>
             {dataFramesList.map(dataFrame => {
                 return (
-                    <li>
-                        <Link to={`/dataframes/${dataFrame.id}`} >{dataFrame.name}</Link>
-                    </li>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>DataFrame</th>
+                                <th>Last Modified</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{dataFrame.name}</td>
+                                <td>{dataFrame.timestamp}</td>
+                                <td><Link to={`/dataframes/${dataFrame.id}`}>Edit</Link></td>
+                            </tr>
+                        </tbody> 
+                    </table>
                 )})
             }
         </ul>
