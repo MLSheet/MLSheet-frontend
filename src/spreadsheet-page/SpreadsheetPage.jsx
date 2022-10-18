@@ -9,7 +9,7 @@ function SpreadsheetPage() {
     const { id } = useParams()
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/dataframes/${id}`).then(function (res){
+        axios.get(`http://192.168.0.142:3000/dataframes/${id}`).then(function (res){
         console.log(res.data.data.data)
         setDatasheetData(res.data.data.data)
     })}, []) 

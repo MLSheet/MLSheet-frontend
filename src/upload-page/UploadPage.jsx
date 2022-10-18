@@ -17,7 +17,7 @@ function UploadPage() {
         formData.append('timestamp', new Date().toISOString().split('.')[0] + 'Z')
         axios({
             method: 'post', 
-            url: 'http://localhost:3000/upload-csv',
+            url: 'http://192.168.0.142:3000/upload-csv',
             data: formData,
             headers: {
                 'Content-Type': `multipart/form-data; boundary=${formData._boundary}`

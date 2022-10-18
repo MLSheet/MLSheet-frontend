@@ -1,0 +1,33 @@
+@use '../variables' as v;
+
+.dataframes-table{
+    width: 60%;
+    margin: 24px auto;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+
+    thead{
+        background-color: v.$color-mid-dark;
+        color: v.$color-light;
+    }
+    tbody{
+        background-color: v.$color-light;
+        color: v.$color-dark;
+    }
+
+    td{
+        padding: 20px;
+    }
+
+    th{
+        padding: 20px;
+    }
+
+    tr{
+        border-top: v.$color-mid-light 1px solid;
+    }
+
+    border: none;
+    border-collapse: collapse;
+    text-align: left;
+    
+}

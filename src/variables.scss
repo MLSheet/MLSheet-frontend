@@ -1,6 +1,15 @@
-$color-light: #DDDDDD;
-$color-dark: #222831;
-$color-accent-1: #F05454;
-$color-accent-2: #30475E;
+$color-light: #F0F5F9;
+$color-dark: #1E2022;
+
+$color-mid-light: #C9D6DF;
+$color-mid-dark: #52616B;
 
 $sidebar-width: 15vw;
+
+:export{
+    colorLight: $color-light;
+    colorDark: $color-dark;
+    colorMidLight: $color-mid-light;
+    colorMidDark: $color-mid-dark;
+    sidebarWidth: $sidebar-width;
+}

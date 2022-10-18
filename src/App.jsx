@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 
 import SpreadsheetPage from './spreadsheet-page/SpreadsheetPage';
-import DataFramesPage from './dataframes-page/DataFramesPage';
+import DataAssetsPage from './data-assets-page/DataAssetsPage';
 import UploadPage from './upload-page/UploadPage';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
                     <Routes>
                         <Route exact path='/' component={<p>Hello World</p>}>
                             <Route exact path="/dataframes/:id" element={<SpreadsheetPage/>} />
-                            <Route exact path="/dataframes" element={<DataFramesPage/>} />
+                            <Route exact path="/dataframes" element={<DataAssetsPage/>} />
                             <Route exact path="/upload" element={<UploadPage/>} />
                         </Route>
                         
